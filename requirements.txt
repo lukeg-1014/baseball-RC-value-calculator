@@ -1,0 +1,18 @@
+# Baseball stats
+pybaseball
+ 
+# Web scraping
+playwright
+beautifulsoup4
+lxml
+ 
+# Web server
+flask
+ 
+# Data / math
+numpy
+pandas
+ 
+# Utilities (part of Python standard library, listed for clarity)
+# csv, json, re, time, datetime, dataclasses — no install needed
+ 
