@@ -62,17 +62,17 @@ def cardValueScore(player: Player, avgPrice: float):
    elif player.playerOPSPlus <= 120:
       fairValue *= 1.16
    elif player.playerOPSPlus <= 140:
-      fairValue *= 1.29
+      fairValue *= 1.22
    elif player.playerOPSPlus <= 155:
-      fairValue *= 1.36
+      fairValue *= 1.29
    elif player.playerOPSPlus <= 170:
-      fairValue *= 1.42
+      fairValue *= 1.36
    elif player.playerOPSPlus <= 180:
-      fairValue *= 1.48
+      fairValue *= 1.40
    elif player.playerOPSPlus <= 195:
-      fairValue *= 1.54
+      fairValue *= 1.48
    else:
-      fairValue *= 1.6
+      fairValue *= 1.57
 
 
 
@@ -164,7 +164,8 @@ listings = mainScrape.search(
     " -lot -bundle -reprint -custom -bowman -heritage -archives -gypsy -ginter",
     max_pages=2   # grab more raw results so the filter has more to work with
 )
-
+time.sleep(.1)
+print("\n--- Price Filtering ---")
 listings = filter_base_cards(listings, [
     inputPlayer.first,
     inputPlayer.last,
